@@ -20,14 +20,21 @@ export default class Authenticator {
     return token;
   }
 
-  public getData(token: string): AuthenticationData {
-    const payload = jwt.verify(token, process.env.JWT_KEY as string) as any;
-    const result = {
-      id: payload.id,
-      email: payload.email
-    };
-    return result;
-  }
+  public getTokenData = (token: string): AuthenticationData | null => {
+    try {
+        const tokenData = jwt.verify(
+            token,
+            process.env.JWT_KEY as string
+        ) as any
+
+        return tokenData
+
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+
+}
 }
 
 export interface AuthenticationData {

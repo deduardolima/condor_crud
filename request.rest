@@ -19,3 +19,35 @@ Content-Type: application/json
     "email":"diego@email.com",
     "password":"12345678"
 }
+
+### Cria um banner
+
+POST http://localhost:3003/banner/create
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{
+    "name": "PlayStation 5",
+    "image": "https://images.kabum.com.br/produtos/fotos/238671/console-sony-playstation-5_1634132554_g.jpg",
+    "customerId":"0e3a0973-452b-4775-ba73-f0c33513dad0",
+    "endAt":"28/08/2022",
+    "startAt":"29/08/2022",
+    "status": true   
+}
+
+### Pega informações do banner por ID
+
+GET http://localhost:3003/banner/all
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+
+### Pega informações do banner por ID
+
+GET http://localhost:3003/banner/id
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{
+   "id":"055a368c-f2f8-4bfa-8ed6-b269f572d57d"
+}
