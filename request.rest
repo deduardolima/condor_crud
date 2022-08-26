@@ -1,0 +1,21 @@
+### Cadastro de usuario
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{   
+    "name": "Diego", 
+    "email":"diego@email.com",
+    "phone": "41991226251",
+    "password":"12345678"
+          
+}
+
+### Login do usuário
+# @name login
+POST http://localhost:3003/user/login
+Content-Type: application/json
+
+{
+    "email":"diego@email.com",
+    "password":"12345678"
+}
