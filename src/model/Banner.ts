@@ -1,13 +1,13 @@
 
 export class Banner {
     constructor(
-        private id: string,
-        private name: string,
-        private image: string,
-        private customerId: string | number,
-        private endAt: string,
-        private startAt: string,
-        private status: boolean,
+        private id?: string,
+        private name?: string,
+        private image?: string,
+        private customerId?: string | number,
+        private endAt?: string,
+        private startAt?: string,
+        private status?: boolean,
 
     ) { }
 
@@ -33,3 +33,9 @@ export interface BannerInputDTO {
     status: string
 }
 
+export interface BannerChangeInputDTO {
+    id: string;
+    name: string;
+    image: string;
+    status: string
+}

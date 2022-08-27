@@ -6,6 +6,7 @@ export const bannerRouter = express.Router();
 
 
 bannerRouter.post("/create", bannerController.create);
-
 bannerRouter.get("/all", bannerController.getBanner);
-bannerRouter.get("/id", bannerController.getBannerByID);
+bannerRouter.get("/id", bannerController.getBannerById);
+bannerRouter.put("/update", bannerController.updateBanner);
+bannerRouter.delete("/delete", bannerController.deleteBanner);

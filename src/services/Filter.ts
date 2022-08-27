@@ -1,4 +1,4 @@
-export default class FilterMock {
+export default class Filter {
     calculate(startAt: string): boolean {
 
 

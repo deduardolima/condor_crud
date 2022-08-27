@@ -1,7 +1,6 @@
 import express, { Express } from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
-import { dogRouter } from "./controller/routes/dogRouter";
 import { userRouter } from "./controller/routes/userRouter";
 import { bannerRouter } from "./controller/routes/bannerRouter";
 
@@ -13,7 +12,7 @@ app.use("/user", userRouter);
 
 app.use("/banner", bannerRouter);
 
-app.use("/dog", dogRouter)
+
 
 
 
