@@ -1,8 +1,8 @@
 import express, { Express } from "express";
 import cors from "cors";
 import { AddressInfo } from "net";
-import { dogRouter } from "./controller/routes/dogRouter";
 import { userRouter } from "./controller/routes/userRouter";
+import { bannerRouter } from "./controller/routes/bannerRouter";
 
 const app: Express = express();
 app.use(express.json());
@@ -10,7 +10,9 @@ app.use(cors());
 
 app.use("/user", userRouter);
 
-app.use("/dog", dogRouter)
+app.use("/banner", bannerRouter);
+
+
 
 
 

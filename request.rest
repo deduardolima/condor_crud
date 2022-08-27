@@ -19,3 +19,58 @@ Content-Type: application/json
     "email":"diego@email.com",
     "password":"12345678"
 }
+
+### Cria um banner
+
+POST http://localhost:3003/banner/create
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{
+    "name": "PlayStation 5",
+    "image": "https://images.kabum.com.br/produtos/fotos/238671/console-sony-playstation-5_1634132554_g.jpg",
+    "customerId":"0e3a0973-452b-4775-ba73-f0c33513dad0",
+    "endAt":"30/08/2022",
+    "startAt":"27/08/2022",
+    "status": true   
+}
+
+### Pega todos os banners
+
+GET http://localhost:3003/banner/all
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+
+### Pega banner por ID
+
+GET http://localhost:3003/banner/id
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{
+   "banner_id":"2d98b816-1da6-44af-9e3a-d485f817f223"
+}
+
+### Atualizar Banner
+
+PUT  http://localhost:3003/banner/update
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{ 
+    "id":"2d98b816-1da6-44af-9e3a-d485f817f223",
+    "name": "nome qualquer",
+    "image": "https://images.kabum.com.br/produtos/fotos/238671/console-sony-playstation-5_1634132554_g.jpg",
+    "status": true   
+
+}
+### Deletar banner por ID
+
+DELETE  http://localhost:3003/banner/delete
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{
+   "banner_id":"2d98b816-1da6-44af-9e3a-d485f817f223"
+}
