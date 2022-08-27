@@ -27,7 +27,7 @@ Authorization: {{login.response.body.token}}
 Content-Type: application/json
 
 {
-    "name": "PlayStation 5",
+    "name": "Samsung S20",
     "image": "https://images.kabum.com.br/produtos/fotos/238671/console-sony-playstation-5_1634132554_g.jpg",
     "customerId":"0e3a0973-452b-4775-ba73-f0c33513dad0",
     "endAt":"30/08/2022",
@@ -49,7 +49,7 @@ Authorization: {{login.response.body.token}}
 Content-Type: application/json
 
 {
-   "banner_id":"2d98b816-1da6-44af-9e3a-d485f817f223"
+   "banner_id":"0f933495-b854-495b-82e4-10cfde9dd80e"
 }
 
 ### Atualizar Banner
@@ -59,8 +59,8 @@ Authorization: {{login.response.body.token}}
 Content-Type: application/json
 
 { 
-    "id":"2d98b816-1da6-44af-9e3a-d485f817f223",
-    "name": "nome qualquer",
+    "id":"d01000af-eedd-45de-8bd6-4bfad613ba48",
+    "name": "Samsung S20",
     "image": "https://images.kabum.com.br/produtos/fotos/238671/console-sony-playstation-5_1634132554_g.jpg",
     "status": true   
 
@@ -72,5 +72,5 @@ Authorization: {{login.response.body.token}}
 Content-Type: application/json
 
 {
-   "banner_id":"2d98b816-1da6-44af-9e3a-d485f817f223"
+   "banner_id":"fe75b815-8bc9-4a11-b38e-156b6a209b0e"
 }

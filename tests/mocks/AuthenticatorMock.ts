@@ -1,5 +1,3 @@
-
-
 interface AuthenticationData {
     id: string;
     email: string;
@@ -11,9 +9,10 @@ export class AuthenticatorMock {
         return "token"
     }
 
-    public verify(token: string) {
+    public getTokenData(token: string) {
         return {
-            id: "id_mock"
+            id: "id_mock",
+            email: "diego@email.com"
         }
     }
 }

@@ -19,7 +19,7 @@ export class BannerBusiness {
         try {
             const { name, image, customerId, endAt, startAt, status } = banner;
             if (!name || !image || !customerId || !endAt || !startAt || !status) {
-                throw new CustomError(422, " Preencha todos os campos 'name', 'image','custumerID', 'endAt' , 'startAt' e 'status'");
+                throw new CustomError(422, "Preencha todos os campos 'name', 'image','custumerID', 'endAt' , 'startAt' e 'status'");
             }
             if (!token) {
                 throw new CustomError(422, "Esse endpoint exige login")
